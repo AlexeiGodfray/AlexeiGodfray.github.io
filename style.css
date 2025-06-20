@@ -207,7 +207,7 @@ body {
 
 
 /* --- Styles for Typewriter Effect --- */
-#typewriter-name, #typewriter-subtitle {
+#typewriter-name {
     /* Ensure elements have space even when empty before typing starts */
     min-height: 1.2em; 
 }
@@ -222,7 +222,7 @@ body {
 }
 
 /* Adjust cursor height for the subtitle */
-#typewriter-subtitle .typewriter-cursor {
+.typewriter-cursor {
     height: 1.3rem;
 }
 
