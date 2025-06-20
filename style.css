@@ -1,0 +1,239 @@
+/* 1. SETUP & GLOBAL STYLES */
+:root {
+    --bg-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #1c1e21;
+    --subtle-text: #606770;
+    --accent-color: #007bff;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 16px;
+    --gap: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: var(--gap);
+}
+
+
+/* 2. BENTO GRID LAYOUT */
+.bento-grid {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(4, 1fr);
+    /* New grid layout with dedicated picture box */
+    grid-template-areas:
+        "pic text text text"
+        "pic text text text"
+        "nasa nasa gov gov"
+        "reverse-shell daily-news education connect"
+        "toolkit toolkit toolkit toolkit";
+}
+
+/* Assigning grid areas to items */
+#profile-pic-box { grid-area: pic; }
+#profile-text { grid-area: text; }
+#nasa { grid-area: nasa; }
+#gov { grid-area: gov; }
+#reverse-shell { grid-area: reverse-shell; }
+#daily-news { grid-area: daily-news; }
+#education { grid-area: education; }
+#connect { grid-area: connect; }
+#toolkit { grid-area: toolkit; }
+
+
+/* 3. GENERAL CARD STYLING */
+.bento-item {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.bento-item h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bento-item h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--subtle-text);
+    margin-bottom: 16px;
+}
+
+.bento-item h3 i {
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+.bento-item ul { list-style: none; }
+.bento-item ul li { margin-bottom: 10px; padding-left: 20px; position: relative; font-size: 0.95rem; }
+.bento-item ul li::before { content: '•'; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+
+
+/* 4. SPECIFIC CARD STYLING */
+
+/* Profile Picture Box */
+#profile-pic-box {
+    padding: 0;
+    overflow: hidden; /* Ensures image corners are rounded */
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Profile Text Box */
+#profile-text {
+    justify-content: center;
+}
+#profile-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+#profile-text .subtitle {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+#profile-text .description {
+    color: var(--subtle-text);
+    max-width: 90%; /* Prevents text from stretching too wide */
+}
+
+/* Project Cards */
+.project-card { justify-content: space-between; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.tech-stack code { background-color: #e9ecef; border-radius: 4px; padding: 4px 8px; font-size: 0.85rem; }
+
+/* Connect Card */
+#connect { justify-content: center; }
+.connect-links { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.connect-link { display: flex; align-items: center; padding: 10px 12px; background-color: #f8f9fa; border-radius: 8px; text-decoration: none; color: var(--text-color); font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
+.connect-link:hover { background-color: var(--accent-color); color: white; }
+.connect-link i { font-size: 1.2rem; margin-right: 12px; width: 20px; text-align: center; }
+
+/* Toolkit Card */
+#toolkit { justify-content: center; }
+.toolkit-grid { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 12px 16px; }
+.toolkit-category { font-weight: 600; text-align: right; color: var(--subtle-text); font-size: 0.9rem; }
+.toolkit-grid > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.toolkit-grid code { background-color: #e9ecef; border-radius: 4px; padding: 4px 8px; font-size: 0.9rem; }
+
+
+/* 5. RESPONSIVE DESIGN */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "pic text"
+            "pic text"
+            "nasa gov"
+            "reverse-shell daily-news"
+            "education connect"
+            "toolkit toolkit";
+    }
+    #profile-text h1 { font-size: 2.2rem; }
+    #profile-text .description { max-width: 100%; }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .portfolio-container { margin: 20px auto; }
+    .bento-grid { grid-template-columns: 1fr; grid-template-areas: none; }
+    .bento-item { grid-area: auto !important; }
+    #profile-pic-box { height: 300px; } /* Give pic box a fixed height on mobile */
+    #profile-text { text-align: center; }
+    #profile-text h1 { font-size: 2rem; }
+    .toolkit-grid { grid-template-columns: 1fr; }
+    .toolkit-category { text-align: left; }
+}
+
+
+/* 6. JAVASCRIPT-DRIVEN STYLES */
+
+/* --- Styles for Staggered Fade-in --- */
+/* Initially hide the bento items */
+.bento-item {
+    opacity: 0;
+    transform: translateY(20px);
+    /* The transition will apply when the 'visible' class is added */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* The state when the item becomes visible */
+.bento-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Remove the default hover transform, as JS now handles it */
+.bento-item:hover {
+    /* transform: translateY(-5px); REMOVE THIS LINE */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Keep the shadow effect */
+}
+
+
+/* --- Styles for Typewriter Effect --- */
+#typewriter-name, #typewriter-subtitle {
+    /* Ensure elements have space even when empty before typing starts */
+    min-height: 1.2em; 
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 2.8rem; /* Match the h1 font size */
+    background-color: var(--accent-color);
+    animation: blink 0.8s infinite;
+}
+
+/* Adjust cursor height for the subtitle */
+#typewriter-subtitle .typewriter-cursor {
+    height: 1.3rem;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Styles for 3D Tilt --- */
+/* Add this to your general card styling to preserve the 3D space */
+.bento-item {
+    /* ... existing styles ... */
+    transform-style: preserve-3d;
+}
