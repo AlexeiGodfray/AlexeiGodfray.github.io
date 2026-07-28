@@ -8,10 +8,12 @@ Richard Feynman
 
 1. You're pretty okay at python, though you don't have to be a wizard. If you're new to programming or a little rusty, then here are two resources you should watch in order.
   - [Neetcode python for beginners](https://www.youtube.com/watch?v=s3KhqPjBPaQ&t=46s)
-    - [Python for beginners](https://www.youtube.com/watch?v=IbMDCwVm63M&t=61s)
+  - [Python Object Oriented Programming](https://www.youtube.com/watch?v=IbMDCwVm63M&t=61s)
 2. You have done AT LEAST calculus 2 (applications of integrals, intro to differential equations, techniques of integration, some analytic geometry (parametric equations, polar coordinates), infinite series).
 
 HOWEVER, even that technically isn't really needed for just practical use. If you would like to learn the mathematics that is needed for Deep Learning at a truly in-depth level, here are a couple resources I recommend.
+
+---
 
 ## Calculus 1-3:
 
@@ -44,6 +46,8 @@ What I would do is
 
 I'm sure there are many more, but for the most part Khan Academy, Ximera, and Paul's notes will get you where you need to be. Openstax is more of a traditional textbook and engineer4free is great as well. 3b1b is amazing for building intuition, but not enough on its own. Pick one and stick with it, and if you need more practice and understanding, use other resources. If you really get into math, I'll write a roadmap for mathematics.
 
+---
+
 3. Linear Algebra:
 
 First watch 3b1b to build the intuition
@@ -71,13 +75,26 @@ What I would do is
 2. Engineering4free
 3. MIT OCW for practice problems or one of the textbooks
 
+---
+
 4. Probability and Statistics:
 
-- [Khan Academy (free)](https://www.khanacademy.org/)
-- [MIT OCW (free)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/)
-- [Steve Brunton (free)](https://www.youtube.com/watch?v=sQqniayndb4&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V)
-- [William Navidi Text Book (paid)](https://www.amazon.com/Statistics-Engineers-Scientists-William-Navidi/dp/0073401331)
+Statsquest to refresh yourself, Steve Brunton to get into the details, MIT OCW to do practice problems and to fill in gaps, Khan Academy for interactive lessons if MIT isn't enough.
+
 - [Stats Quest (free)](https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9)
+- [Steve Brunton (free)](https://www.youtube.com/watch?v=sQqniayndb4&list=PLMrJAkhIeNNR3sNYvfgiKgcStwuPSts9V)
+- [MIT OCW (free)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/)
+- [Khan Academy (free)](https://www.khanacademy.org/math/ap-statistics)
+- [William Navidi Text Book (paid)](https://www.amazon.com/Statistics-Engineers-Scientists-William-Navidi/dp/0073401331)
+
+What I would do is
+
+1. Statsquest
+2. Steve Brunton
+3. MIT OCW
+4. Khan Academy, if MIT isn't enough
+
+---
 
 5. It is also useful to know traditional Machine Learning.
 
@@ -94,6 +111,8 @@ Then use Cornell's HW, slides etc for practical implementation and coding models
 - [Cornell](https://www.cs.cornell.edu/courses/cs4780/2024sp/)
 
 and while you're doing this, don't be afraid to go [kaggle](https://www.kaggle.com/) and grab datasets and do projects. The only real way to learn these things is projects, not just watching videos, and reading books.
+
+---
 
 ## DEEP LEARNING
 
@@ -126,6 +145,8 @@ Use the text books above for reference, or when you're watching the statsquest p
 If you're really up for the challenge look into PINNs.
 
 [PINNs](https://www.youtube.com/watch?v=JoFW2uSd3Uo&list=PLMrJAkhIeNNQ0BaKuBKY43k4xMo6NSbBa)
+
+---
 
 ## HOW TO STUDY THIS?
 
